@@ -54,12 +54,33 @@ console.log(`Mayor: ${mayor} y Menor ${menor}`);
 
 // Actividad 3
 
-var palabra = "hola"
+let palabra = "hola"
 console.log(`la palabra ${palabra} tiene letras ${palabra.length}`);
 
 // Actividad 4
 
+let par = 0;
+let impar = 0;
+let Ej4Numero = 5;
+
+Resultado = Ej4Numero % 2;
+
+if (Resultado === 0)
+{
+    console.log(`El numero ${Ej4Numero} es par`);
+}
+else
+{
+    console.log(`El numero ${Ej4Numero} es impar`);
+}
+
 // Actividad 5
+
+var palabraEj4 = "Hola"
+for (var cantidad = 2; cantidad > 0; cantidad--)
+{
+    console.log(palabraEj4);
+}
 
 // Actividad 6
 
