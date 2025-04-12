@@ -69,7 +69,34 @@ console.log("---------------------------------------------------------");
 
 // Actividad 6
 
+function separacion(a, b) {
+    let [menor2, mayor2] = a < b ? [a, b] : [b, a]; //si a es menor que b (a < b ?), menor2 es a y mayor2 es b ([a, b]), si no (:), se invierten ([b, a])
+    let numeros = "";
+    for (let sepa = menor2 + 1; sepa < mayor2; sepa++)
+    {
+        if (sepa == mayor2 - 1) 
+            {
+                numeros += `y ${sepa}`;
+            }
+        else if (sepa == mayor2 - 2)
+            {
+                numeros += `${sepa} `;
+            }
+        else 
+            {
+                numeros += `${sepa}, `;
+            }
+    }
+    return {numeros, a, b}; //a y b para poder referenciarlos fuera de la funcion
+}
+
+let resultado = separacion(5, 10);
+console.log(`los numeros que separan a ${resultado.a} y ${resultado.b} son ${resultado.numeros}`);
+console.log("---------------------------------------------------------");
+
 // Actividad 7
+
+
 
 // Actividad 8
 
