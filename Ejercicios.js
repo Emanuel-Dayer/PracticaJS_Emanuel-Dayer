@@ -96,22 +96,65 @@ console.log("---------------------------------------------------------");
 
 // Actividad 7
 
+function multiplos(a, b) {
+    let [menor2, mayor2] = a < b ? [a, b] : [b, a];
+    let numeros = "";
+    for (let sepa = menor2 + 1; sepa < mayor2; sepa++)
+    {
+        if (sepa % 3 == 0) //separar los multiplos de 3
+        {
+            if (sepa == mayor2 - 1) 
+                {
+                    numeros += `y ${sepa}`;
+                }
+            else if (sepa == mayor2 - 2)
+                {
+                    numeros += `${sepa} `;
+                }
+            else 
+                {
+                    numeros += `${sepa}, `;
+                }
+        }
+    }
+    return {numeros, a, b};
+}
 
+resultado = multiplos(5, 10);
+if (resultado.numeros == "")
+{
+    console.log(`No hay multiples de 3 entre ${resultado.a} y ${resultado.b}`);
+}
+else
+{
+    console.log(`los multiplos de 3 entre ${resultado.a} y ${resultado.b} son ${resultado.numeros}`);
+}
+console.log("---------------------------------------------------------");
 
 // Actividad 8
+
+var multiplos2y5 = 0;
+var i = 0;
+while (i <= 100) 
+{
+    if (i % 2 == 0 || i % 5 == 0)
+    {
+         multiplos2y5 += `${i}, `;
+    }
+    i++;
+}
+
+console.log(`los multiplos de 2 y 5 en 100 son ${multiplos2y5}`);
 
 // Actividad 9
 
 // Actividad 10
 
-
 // Actividad 11
-
 
 // Actividad 12
 
 // Actividad 13
-
 
 // Actividad 14
 
