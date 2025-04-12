@@ -4,58 +4,41 @@ let primerNum = 2;
 let SegundoNum = 1;
 SumaNum = primerNum + SegundoNum;
 console.log(`${primerNum} + ${SegundoNum} es ${SumaNum}`);
+console.log("---------------------------------------------------------");
 
 // Actividad 2
 
 let valoruno = 8;
 let valordos = 3;
 let valortres = 1;
-let mayor = 0;
-let menor = 0;
+let mayor = valoruno;
+let menor = valoruno;
 
-if (valoruno > valordos & valoruno > valortres)
+if (valordos > mayor)
 {
-    if(valordos > valortres)
-        {
-            menor = valortres
-        }
-        else
-        {
-            menor = valordos
-        }
-    mayor = valoruno
-} 
-else if (valordos > valoruno & valordos > valortres)
-{
-    if(valortres > valoruno)
-        {
-            menor = valoruno
-        }
-        else
-        {
-            menor = valortres
-        }
-    mayor = valordos
+    mayor = valordos;
 }
-else
+else if (valortres > mayor)
 {
-    if(valordos > valoruno)
-        {
-            menor = valoruno
-        }
-        else
-        {
-            menor = valordos
-        }
-    mayor = valortres
+    mayor = valortres;
+}
+if (valordos < menor)
+{
+    menor = valordos;
+}
+else if (valortres < menor)
+{
+    menor = valortres;
 }
 
 console.log(`Mayor: ${mayor} y Menor ${menor}`);
+console.log("---------------------------------------------------------");
 
 // Actividad 3
 
 let palabra = "hola"
 console.log(`la palabra ${palabra} tiene letras ${palabra.length}`);
+console.log("---------------------------------------------------------");
 
 // Actividad 4
 
@@ -73,6 +56,7 @@ else
 {
     console.log(`El numero ${Ej4Numero} es impar`);
 }
+console.log("---------------------------------------------------------");
 
 // Actividad 5
 
@@ -81,6 +65,7 @@ for (var cantidad = 2; cantidad > 0; cantidad--)
 {
     console.log(palabraEj4);
 }
+console.log("---------------------------------------------------------");
 
 // Actividad 6
 
