@@ -148,6 +148,15 @@ console.log(`los multiplos de 2 y 5 en 100 son ${multiplos2y5}`);
 
 // Actividad 9
 
+let miarray = [20, 22, 3];
+let suma = 0;
+for (let i = 0; i < miarray.length; i++) //cundo i es 0, ingresa al primer elemento del array, miarray[0] = 20, cuando i es 1, miarray[1] = 2, etc
+{
+    suma += miarray[i]; //suma los elementos segun el valor de i, miarray[i] = 20, 2, 3
+    //suma = 20 + 2 + 3
+}
+console.log(`la suma de los elementos del array es ${suma}`);
+
 // Actividad 10
 
 // Actividad 11
