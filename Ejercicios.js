@@ -204,13 +204,58 @@ function contarLetras(palabra) {
 
 lapalabra = contarLetras("PALA");
 console.log(lapalabra);
-
-
-
-
-
+console.log("---------------------------------------------------------");
 
 // Actividad 12
+
+/* 
+Probando imprimir un valor de un objeto literal dentro de un array
+console.log(personas[0].edad);   el 0 indica que es el primer objeto literal, y puedo hacer referencia a su contenido con un punto
+*/
+
+//Los [] definen una lista o array, dentro de esta lista los {} definen los objetos literales
+var personas = [
+    { nombre: "Juan", sexo: "masculino", edad: 25 },
+    { nombre: "Maria", sexo: "femenino", edad: 30 },
+    { nombre: "Pedro", sexo: "masculino", edad: 20 },
+    { nombre: "Ana", sexo: "femenino", edad: 35 },
+];
+
+let sumaEdad = 0;
+let sumaedadmujeres = 0;
+let menorhombre = Infinity; //xd, para que pueda comparar si es menor
+let mayormujer = 0;
+
+for (let i = 0; i < personas.length; i++)
+{
+    sumaEdad += personas[i].edad;
+    if (personas[i].sexo === "femenino")
+        {
+            sumaedadmujeres += personas[i].edad
+            if (personas[i].edad > mayormujer)
+            {
+                mayormujer = personas[i].edad
+                var nombremujermayor = personas[i].nombre;
+            }
+        }
+        else // si no es femenino sera lo otro digo yo
+        {
+            if (personas[i].edad < menorhombre)
+                {
+                    menorhombre = personas[i].edad
+                    var nombrehombremenor = personas[i].nombre;
+                }
+        }
+}
+
+let promedioedad = sumaEdad / personas.length;
+let promedioedadmujeres = sumaedadmujeres / personas.filter(filtrosexo => filtrosexo.sexo === "femenino").length; // esta cosa, el filter, filtra cosas, para eso hace un nuevo array temporal que lo define con => y la condicion, o por lo menos eso entendi, y despues sacamos la longitud del nuevo arreglo con el lenght para usarlo en el promedio
+
+console.log(`El promedio de edad, redondeado, es de ${Math.round(promedioedad)}`);
+console.log(`El nombre de la mujer mayor es ${nombremujermayor}`);
+console.log(`El nombre del hombre menor es ${nombrehombremenor}`);
+console.log(`El Promedio de edad de las mujeres es ${Math.round(promedioedadmujeres)}`);
+console.log("---------------------------------------------------------");
 
 // Actividad 13
 
