@@ -259,8 +259,98 @@ console.log("---------------------------------------------------------");
 
 // Actividad 13
 
+//les cambie un poco las cosas para ver si no me lo toma del otro
+
+var personas2 = [
+    { nombre: "Juaco", sexo: "masculino", edad: 26 },
+    { nombre: "Marta", sexo: "femenino", edad: 32 },
+    { nombre: "Pedrito", sexo: "masculino", edad: 22 },
+    { nombre: "Analia", sexo: "femenino", edad: 36 },
+];
+
+function obtenerPromedioEdad(array) 
+{
+    sumaEdad = 0;
+    for (let i = 0; i < array.length; i++)
+        {
+            sumaEdad += array[i].edad;
+        }
+    return sumaEdad / array.length;
+}
+
+function obtenerMujerMayor(array) 
+{
+    for (let i = 0; i < array.length; i++)
+        {
+            if (array[i].sexo === "femenino")
+                {
+                    if (array[i].edad > mayormujer)
+                    {
+                        mayormujer = array[i].edad
+                        nombremujermayor = array[i].nombre;
+                    }
+                }
+        }
+    return {nombremujermayor};
+}
+
+function obtenerHombreMenor(array) 
+{
+    let menorhombre = Infinity;
+    for (let i = 0; i < array.length; i++)
+        {
+            if (array[i].edad < menorhombre)
+                {
+                    menorhombre = array[i].edad
+                    nombrehombremenor = array[i].nombre;
+                }
+        }
+    return {nombrehombremenor};
+}
+
+function obtenerPromedioEdadMujeres(array) 
+{
+    sumaedadmujeres = 0
+    for (let i = 0; i < array.length; i++)
+        {
+            if (array[i].sexo === "femenino")
+                {
+                    sumaedadmujeres += personas[i].edad
+                }
+        }
+    return sumaedadmujeres / array.filter(filtrosexo => filtrosexo.sexo === "femenino").length;
+}
+
+console.log(`El promedio de edad es ${Math.round(obtenerPromedioEdad(personas2))}`);
+console.log(`La mujer con mayor edad es ${obtenerMujerMayor(personas2)}`);
+console.log(`El hombre con menor edad es ${obtenerHombreMenor(personas2)}`);
+console.log(`El promedio de edad de las mujeres es ${Math.round(obtenerPromedioEdadMujeres(personas2))}`);
+console.log("---------------------------------------------------------");
+
 // Actividad 14
 
-// Actividad 15
+function listadivisores(minimo, maximo, divisor) 
+{
+    if (divisor === 0)  
+    {
+        console.log("no te hagas el chistoso, no podes dividir por 0");
+    }
+    else
+    {
+        var listadivisores = "";
+        for (let i = minimo; i <= maximo; i++)
+            {
+                if (i % divisor === 0)
+                {
+                    listadivisores += `${i}, `;
+                }
 
-// Actividad 16
+            }
+        return {listadivisores, minimo, maximo};
+    }
+}
+
+var calculodivisores = listadivisores(2, 20, 2);
+console.log(`los divisores entre ${calculodivisores.minimo} y ${calculodivisores.maximo} son ${calculodivisores.listadivisores}`);
+
+// el fin :D
