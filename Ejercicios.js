@@ -145,6 +145,7 @@ while (i <= 100)
 }
 
 console.log(`los multiplos de 2 y 5 en 100 son ${multiplos2y5}`);
+console.log("---------------------------------------------------------");
 
 // Actividad 9
 
@@ -156,10 +157,58 @@ for (let i = 0; i < miarray.length; i++) //cundo i es 0, ingresa al primer eleme
     //suma = 20 + 2 + 3
 }
 console.log(`la suma de los elementos del array es ${suma}`);
+console.log("---------------------------------------------------------");
 
 // Actividad 10
 
+miarray = [2, 2, 3];
+suma = 0;
+for (let i = 0; i < miarray.length; i++)
+{
+    if (miarray[i] % 2 == 0)
+    {
+        suma += miarray[i];
+    }
+}
+console.log(`la suma de los elementos pares del array es ${suma}`);
+console.log("---------------------------------------------------------");
+
 // Actividad 11
+
+/* 
+Probando objetos literales
+let test = {
+    clave: "valor",
+    Nombre: "jose",
+    Apellido: "nose",
+    Edad: 22,
+}
+
+console.log(test.Apellido); */
+
+function contarLetras(palabra) {
+    let conteoLetras = {}; //objeto literal
+    for (let indice = 0; indice < palabra.length; indice++) //recorre la palabra letra por letra
+    {
+        if (conteoLetras[palabra[indice]]) //como en el primer bucle el indice es 0, el inidice duvuelve la letra p de la palabra pala, y eso se lo devuelve a conteoLetras
+        {
+            conteoLetras[palabra[indice]]++; //si la letra ya existe dentro de conteoletras en el objeto, se le suma 1
+        } 
+        else 
+        {
+            conteoLetras[palabra[indice]] = 1; //si no existe en conteoletras todavia, se le asigna 1
+        }
+    }
+    return conteoLetras;
+}
+
+lapalabra = contarLetras("PALA");
+console.log(lapalabra);
+
+
+
+
+
 
 // Actividad 12
 
